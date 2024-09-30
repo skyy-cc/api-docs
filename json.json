@@ -221,6 +221,54 @@
                     }
                 ]
             }
+        },
+        "/v1/cve?q={keyword}&s={filter}": {
+            "get": {
+                "tags": [
+                    "utilities"
+                ],
+                "summary": "Search for a CVE",
+                "description": "Search for a vulnerability or exploit by keyword",
+                "operationId": "cve",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Keyword to search for",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "description": "Filter or sorting to search by, Ex. 'recent', '7d', '3m', '1y', 'month', 'year'",
+                        "required": false,
+                        "type": "string",
+                        "format": "filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": [],
+                        "api_key_alt": []
+                    }
+                ]
+            }
         }
     },
     "securityDefinitions": {
