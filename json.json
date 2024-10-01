@@ -22,6 +22,10 @@
         {
             "name": "images",
             "description": "Image database access"
+        },
+        {
+            "name": "administration",
+            "description": "View and manage the API"
         }
     ],
     "schemes":[
@@ -252,6 +256,122 @@
                         "required": false,
                         "type": "string",
                         "format": "filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": [],
+                        "api_key_alt": []
+                    }
+                ]
+            }
+        },
+        "/v1/apiKey": {
+            "get": {
+                "tags": [
+                    "administration"
+                ],
+                "summary": "Get information on the current API key",
+                "description": "Get information on the current API key",
+                "operationId": "Getapikey",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "administration"
+                ],
+                "summary": "Generate a new API Key",
+                "description": "Will allow for the creation of a new API key",
+                "operationId": "Postapikey",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "paths",
+                        "in": "body",
+                        "description": "The paths to allow access to",
+                        "required": true,
+                        "type": "array",
+                        "format": "paths"
+                    },
+                    {
+                        "name": "email",
+                        "in": "body",
+                        "description": "Email of the user",
+                        "required": true,
+                        "type": "string",
+                        "format": "email"
+                    },
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "Name of the user",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": [],
+                        "api_key_alt": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "administration"
+                ],
+                "summary": "Delete a specific API key",
+                "description": "Delete the specified API key",
+                "operationId": "Deleteapikey",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "key",
+                        "in": "query",
+                        "description": "Key to delete",
+                        "required": true,
+                        "type": "string",
+                        "format": "apIkey"
                     }
                 ],
                 "responses": {
