@@ -462,8 +462,7 @@
                     "type": "object"
                 },
                 "responseTime": {
-                    "type": "integer",
-                    "format": "int32"
+                    "type": "string"
                 },
                 "requestId": {
                     "type": "string"
