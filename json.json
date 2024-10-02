@@ -20,7 +20,7 @@
             "description": "Access to various utility functions"
         },
         {
-            "name": "images",
+            "name": "media",
             "description": "Image database access"
         },
         {
@@ -40,12 +40,8 @@
                 "summary": "Returns your current IP address",
                 "description": "IPv4 & IPv6 supported",
                 "operationId": "myip",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "responses": {
                     "200": {
                         "description": "successful operation",
@@ -64,12 +60,8 @@
                 "summary": "Get information about an IP address",
                 "description": "IPv4 & IPv6 supported",
                 "operationId": "checkip",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "ip",
@@ -104,12 +96,8 @@
                 "summary": "Returns some information about the Discord guild",
                 "description": "Will return the guild name, ID, Invite, online members, and if the guild is online.",
                 "operationId": "guildinfo",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "guildid",
@@ -138,12 +126,8 @@
                 "summary": "Check if a port is open",
                 "description": "Domains and IP addresses supported",
                 "operationId": "portcheck",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "hostname",
@@ -186,12 +170,8 @@
                 "summary": "Check if a port is open",
                 "description": "Domains and IP addresses supported",
                 "operationId": "records",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "name",
@@ -234,12 +214,8 @@
                 "summary": "Search for a CVE",
                 "description": "Search for a vulnerability or exploit by keyword",
                 "operationId": "cve",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "q",
@@ -274,6 +250,308 @@
                 ]
             }
         },
+        "/v1/media/8ball": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random 8Ball Picture!",
+                "description": "Provides a random picture of a classic 8Ball Response",
+                "operationId": "media8ball",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/ahug": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random Anime Hug Picture!",
+                "description": "Provides a random picture(gif) of a anime hug",
+                "operationId": "mediaahug",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/akiss": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random Anime Kiss Picture!",
+                "description": "Provides a random picture(gif) of a anime kiss",
+                "operationId": "mediakiss",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/apat": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random Anime Pat Picture!",
+                "description": "Provides a random picture(gif) of a anime Head Pat",
+                "operationId": "mediapat",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/cat": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random Cat Picture!",
+                "description": "Provides a random picture of a kitty cat!",
+                "operationId": "mediacat",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/cheese": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random Cheese Picture!",
+                "description": "Provides a random picture of cheese!",
+                "operationId": "mediacheese",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/deer": {
+            "get": {
+                "tags": [
+                    "media"
+                ],
+                "summary": "Random Deer Picture!",
+                "description": "Provides a random picture of a deer!",
+                "operationId": "mediadeer",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/dog": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Dog Picture!",
+                "description": "Provides a random picture of a dog!",
+                "operationId": "mediadog",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/fox": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Fox Picture!",
+                "description": "Provides a random picture of a fox!",
+                "operationId": "mediafox",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/husky": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Husky Picture!",
+                "description": "Provides a random picture of a husky!",
+                "operationId": "mediahusky",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/nature": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Nature Picture!",
+                "description": "Provides a random picture of nature!",
+                "operationId": "medianature",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/snep": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Snep (Snow Leopard) Picture!",
+                "description": "Provides a random picture of a snep (snow leopard)!",
+                "operationId": "mediasnep",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/turtle": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Turtle Picture!",
+                "description": "Provides a random picture of a turtle!",
+                "operationId": "mediaturtle",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/wolves": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Wolves Picture!",
+                "description": "Provides a random picture of wolves!",
+                "operationId": "mediawolves",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/yeen": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Yeen (Hyena) Picture!",
+                "description": "Provides a random picture of a yeen (hyena)!",
+                "operationId": "mediayeen",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/media/yiff": {
+            "get": {
+                "tags": ["media"],
+                "summary": "Random Yiff Picture! !NSFW!",
+                "description": "Provides a random picture of yiff content! NSFW!",
+                "operationId": "mediayiff",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/v1/apikey": {
             "get": {
                 "tags": [
@@ -282,12 +560,8 @@
                 "summary": "Get information on the current API key",
                 "description": "Get information on the current API key",
                 "operationId": "Getapikey",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "responses": {
                     "200": {
                         "description": "successful operation",
@@ -310,12 +584,8 @@
                 "summary": "Generate a new API Key",
                 "description": "Will allow for the creation of a new API key",
                 "operationId": "Postapikey",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "paths",
@@ -364,12 +634,8 @@
                 "summary": "Update an existing API Key",
                 "description": "Will allow for the updating of an existing API key",
                 "operationId": "Putapikey",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "data",
@@ -402,12 +668,8 @@
                 "summary": "Delete a specific API key",
                 "description": "Delete the specified API key",
                 "operationId": "Deleteapikey",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
                 "parameters": [
                     {
                         "name": "k",
